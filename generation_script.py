@@ -692,11 +692,37 @@ def main() -> None:
         ("NPLS_GWQI", "bayesian", lambda: run_bayesian_endpoint_model(
             wf.prep.get_augmented_predictor_block(data, "NPLS_GWQI"), wqi["NPLS_GWQI"], "NPLS_GWQI",
             include_scale=True, use_augmented=True,
-            draws=ENDPOINT_BAYES_DRAWS, tune=ENDPOINT_BAYES_TUNE, chains=ENDPOINT_BAYES_CHAINS, random_state=SEED
+            draws=max(ENDPOINT_BAYES_DRAWS, 1500),
+            tune=max(ENDPOINT_BAYES_TUNE, 1500),
+            chains=max(ENDPOINT_BAYES_CHAINS, 2),
+            cores=1,
+            target_accept=0.99,
+            max_treedepth=15,
+            likelihood="studentt",
+            studentt_nu=4.0,
+            regularized_horseshoe=True,
+            slab_scale=2.0,
+            shrinkage_family="normal",
+            tau_beta=0.5,
+            lam_beta=1.0,
+            random_state=SEED
         )),
         ("F", "bayesian", lambda: run_bayesian_endpoint_model(
             wf.prep.get_augmented_predictor_block(data, "F"), data["F"], "F", include_scale=True, use_augmented=True,
-            draws=ENDPOINT_BAYES_DRAWS, tune=ENDPOINT_BAYES_TUNE, chains=ENDPOINT_BAYES_CHAINS, random_state=SEED + 200
+            draws=max(ENDPOINT_BAYES_DRAWS, 1500),
+            tune=max(ENDPOINT_BAYES_TUNE, 1500),
+            chains=max(ENDPOINT_BAYES_CHAINS, 2),
+            cores=1,
+            target_accept=0.99,
+            max_treedepth=15,
+            likelihood="studentt",
+            studentt_nu=4.0,
+            regularized_horseshoe=True,
+            slab_scale=2.0,
+            shrinkage_family="normal",
+            tau_beta=0.5,
+            lam_beta=1.0,
+            random_state=SEED + 200
         )),
         ("F_SPLS", "spls", lambda: run_sparse_pls_endpoint_model(
             wf.prep.get_augmented_predictor_block(data, "F"), data["F"], "F", use_augmented=True,
@@ -709,7 +735,38 @@ def main() -> None:
         if cache_path.exists():
             print(f"Loading cached {mtype} model for {key} from {cache_path.name}")
             with open(cache_path, "rb") as f:
-                endpoint_models[key] = pickle.load(f)
+                cached_obj = pickle.load(f)
+
+            # If cached Bayesian models predate newer metadata (e.g., fit_config), backfill metadata
+            # (avoid expensive refits when the trace already exists).
+            if mtype == "bayesian" and isinstance(cached_obj, dict) and ("fit_config" not in cached_obj):
+                print(f"Cached bayesian model for {key} is missing fit metadata; backfilling fit_config...")
+                if key in {"NPLS_GWQI", "F"}:
+                    cached_obj["fit_config"] = {
+                        "draws": int(max(ENDPOINT_BAYES_DRAWS, 1500)),
+                        "tune": int(max(ENDPOINT_BAYES_TUNE, 1500)),
+                        "chains": int(max(ENDPOINT_BAYES_CHAINS, 2)),
+                        "cores": 1,
+                        "random_state": int(SEED if key == "NPLS_GWQI" else SEED + 200),
+                        "target_accept": 0.99,
+                        "max_treedepth": 15,
+                        "likelihood": "studentt",
+                        "studentt_nu": 4.0,
+                        "regularized_horseshoe": True,
+                        "slab_scale": 2.0,
+                        "shrinkage_family": "normal",
+                        "tau_beta": 0.5,
+                        "lam_beta": 1.0,
+                        "log_likelihood": True,
+                        "posterior_predictive": False,
+                        "use_augmented": True,
+                        "include_scale": True,
+                    }
+                    with open(cache_path, "wb") as f:
+                        pickle.dump(cached_obj, f)
+                else:
+                    print(f"WARNING: missing fit metadata for {key}; leaving as-is.")
+            endpoint_models[key] = cached_obj
         else:
             print(f"Running {mtype} model for {key}...")
             res_dict = run_fn()
