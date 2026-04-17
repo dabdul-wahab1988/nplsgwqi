@@ -1,8 +1,11 @@
 # NPLS-GWQI (Neutrosophic PLS Groundwater Quality Index)
 
-Research-oriented Python utilities for groundwater quality indexing, hydrogeochemical process attribution, and human health risk screening.
+Research-oriented Python code and manuscript sources for an integrated groundwater assessment workflow (quality indexing, compositional process discovery, Bayesian driver attribution, health risk, and irrigation suitability), implemented for a 34-sample Karaga District (Northern Ghana) case study.
 
-This repository currently contains the `src/nplsgwqi` package code (no published PyPI package yet). The main entrypoints are re-exported from `nplsgwqi` for convenience.
+This repository contains both:
+
+- `src/nplsgwqi/`: the Python package code (no published PyPI package yet)
+- `manuscript/`: manuscript sources, artifacts, and reviewer-response materials
 
 ## What’s inside
 
@@ -19,6 +22,17 @@ This repository currently contains the `src/nplsgwqi` package code (no published
 - **Irrigation indices**: `calculate_irrigation_indices()` computes common irrigation suitability indices (see module for details).
 - **Integrated workflow**: `IntegratedWorkflow` (in `nplsgwqi.orchestrator`) ties together preprocessing, process discovery, regression, WQI, risk, irrigation, and validation.
 
+## Manuscript + reviewer-response materials
+
+Key files under `manuscript/`:
+
+- `manuscript/sections/`: the manuscript section sources (`.md`)
+- `manuscript/supplementary-methodology.md`: supplementary methodology (synced from `Supplementary Material.docx` with an addendum for reviewer-requested analyses)
+- `manuscript/reviewer_comments.md`: verbatim reviewer-style comments extracted from `Comments on Karaga Manuscript.docx`
+- `manuscript/response_to_comments.md`: comment-by-comment response with file+line anchors into the manuscript sources
+- `manuscript/artifacts/`: tables/figures referenced by the manuscript
+- `manuscript/analysis_workflow.md` and `manuscript/data_dictionary.md`: replication metadata (workflow diagram + variable dictionary)
+
 ## Requirements
 
 Minimum: Python **3.10+**
@@ -32,6 +46,12 @@ Core dependencies (imported by the package):
 Optional (only needed if you use Bayesian risk mode):
 
 - `pymc`
+
+For the reviewer-response artifact scripts in `manuscript/`, additional dependencies are typically required:
+
+- `matplotlib`
+- `arviz`
+- `phreeqpython`
 
 ## Install / use locally
 
@@ -47,6 +67,19 @@ cd nplsgwqi
 $env:PYTHONPATH = (Resolve-Path .\src).Path
 python -c "from nplsgwqi import calculate_npls_gwqi; print(calculate_npls_gwqi)"
 ```
+
+## Reproduce manuscript artifacts (local)
+
+From the repo root:
+
+- Baseline analysis artifacts: `python generation_script.py`
+- Reviewer-requested additions (CBE tables, PHREEQC SI, benchmarking, irrigation disagreement, risk summaries): `python manuscript/reviewer_revision_artifacts.py`
+- Regenerate the response-to-comments Markdown: `python manuscript/generate_response_to_comments.py`
+
+Notes:
+
+- Bayesian driver-model diagnostics can be compute-intensive depending on sampling settings (draws/tune/chains).
+- Outputs are written under `manuscript/artifacts/` and should match the tables/figures referenced in `manuscript/sections/**/*.md`.
 
 ## Quickstart: compute NPLS-GWQI
 
@@ -137,6 +170,11 @@ Bayesian mode (`mode="bayesian"` or `mode="both"`) requires `pymc` and can take 
 ## Repository layout
 
 ```
+manuscript/
+  sections/
+  artifacts/
+  reviewer_comments.md
+  response_to_comments.md
 src/
   nplsgwqi/
     __init__.py
@@ -144,6 +182,8 @@ src/
     risk.py
     process_regression.py
     ...
+tests/
+data.csv
 ```
 
 ## Citation / attribution
@@ -153,4 +193,3 @@ If you use this code in academic work, please cite the associated manuscript/pro
 ## Disclaimer
 
 This code is provided for research and screening purposes. Always validate results against domain expertise, local standards, and quality assurance procedures before making operational or regulatory decisions.
-

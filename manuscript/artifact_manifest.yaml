@@ -1,0 +1,212 @@
+artifacts:
+  # --- TABLES ---
+  - id: TAB-1
+    name: "Table 1: Descriptive statistics and CBE"
+    output_path: "manuscript/artifacts/Table1_Descriptive_Statistics.csv"
+    objectives: ["OBJ-1"]
+  - id: TAB-2
+    name: "Table 2: WHO/GSA guideline comparison"
+    output_path: "manuscript/artifacts/Table2_WHO_GSA_Compliance.csv"
+    objectives: ["OBJ-1"]
+  - id: TAB-3
+    name: "Table 3: NPLS-VIP dynamic weights"
+    output_path: "manuscript/artifacts/Table3_VIP_Weights.csv"
+    objectives: ["OBJ-2"]
+  - id: TAB-4
+    name: "Table 4: NPLS-GWQI classification"
+    output_path: "manuscript/artifacts/Table4_GWQI_Classification.csv"
+    objectives: ["OBJ-2"]
+  - id: TAB-5
+    name: "Table 5: Parallel Analysis eigenvalues"
+    output_path: "manuscript/artifacts/Table5_Parallel_Analysis.csv"
+    objectives: ["OBJ-3"]
+  - id: TAB-6
+    name: "Table 6: CLR loadings and process names"
+    output_path: "manuscript/artifacts/Table6_CLR_Loadings.csv"
+    objectives: ["OBJ-3"]
+  - id: TAB-7
+    name: "Table 7: Geochemical constraint indices"
+    output_path: "manuscript/artifacts/Table7_Geochemical_Constraints.csv"
+    objectives: ["OBJ-3"]
+  - id: TAB-8
+    name: "Table 8: Sparse PLS endpoint driver stability"
+    output_path: "manuscript/artifacts/Table8_Process_Influence.csv"
+    objectives: ["OBJ-4"]
+  - id: TAB-9
+    name: "Table 9: Sparse PLS diagnostics, nested CV and permutation test"
+    output_path: "manuscript/artifacts/Table9_Model_Diagnostics.csv"
+    objectives: ["OBJ-4"]
+  - id: TAB-10
+    name: "Table 10: Deterministic HQ and HI"
+    output_path: "manuscript/artifacts/Table10_Deterministic_Risk.csv"
+    objectives: ["OBJ-5"]
+  - id: TAB-11
+    name: "Table 11: HBMPRA posterior summary"
+    output_path: "manuscript/artifacts/Table11_Bayesian_Risk.csv"
+    objectives: ["OBJ-5"]
+  - id: TAB-12
+    name: "Table 12: Irrigation index statistics"
+    output_path: "manuscript/artifacts/Table12_Irrigation_Indices.csv"
+    objectives: ["OBJ-6"]
+  - id: TAB-13
+    name: "Table 13: Entropy weights and N-ISI"
+    output_path: "manuscript/artifacts/Table13_NISI_Classification.csv"
+    objectives: ["OBJ-6"]
+  - id: TAB-S1
+    name: "Table S1: Full sample-level WQI"
+    output_path: "manuscript/artifacts/TableS1_Full_WQI.csv"
+    objectives: ["OBJ-2"]
+  - id: TAB-S2
+    name: "Table S2: Sample-level process contributions"
+    output_path: "manuscript/artifacts/TableS2_Sample_Contributions.csv"
+    objectives: ["OBJ-4"]
+
+  - id: TAB-14
+    name: "Table 14: WQI class probabilities (measurement-error propagation)"
+    output_path: "manuscript/artifacts/Table14_WQI_Probabilities.csv"
+    objectives: ["OBJ-2"]
+  - id: TAB-15
+    name: "Table 15: N-ISI class probabilities (measurement-error propagation)"
+    output_path: "manuscript/artifacts/Table15_ISI_Probabilities.csv"
+    objectives: ["OBJ-6"]
+
+  - id: TAB-16
+    name: "Table 16: Charge balance error (CBE) per sample"
+    output_path: "manuscript/artifacts/Table16_CBE_PerSample.csv"
+    objectives: ["OBJ-1"]
+  - id: TAB-17
+    name: "Table 17: Charge balance error (CBE) summary"
+    output_path: "manuscript/artifacts/Table17_CBE_Summary.csv"
+    objectives: ["OBJ-1"]
+  - id: TAB-18
+    name: "Table 18: Saturation indices (Calcite/Dolomite/Fluorite) with temperature sensitivity"
+    output_path: "manuscript/artifacts/Table18_Saturation_Indices.csv"
+    objectives: ["OBJ-3"]
+  - id: TAB-19
+    name: "Table 19: Bayesian driver model diagnostics (R-hat, ESS, LOO/WAIC)"
+    output_path: "manuscript/artifacts/Table19_Bayes_Diagnostics_DriverModels.csv"
+    objectives: ["OBJ-4"]
+  - id: TAB-20
+    name: "Table 20: Horseshoe prior sensitivity (global scale)"
+    output_path: "manuscript/artifacts/Table20_Prior_Sensitivity_Horseshoe.csv"
+    objectives: ["OBJ-4"]
+  - id: TAB-21
+    name: "Table 21: ILR basis sensitivity summary"
+    output_path: "manuscript/artifacts/Table21_ILR_Basis_Sensitivity.csv"
+    objectives: ["OBJ-3"]
+  - id: TAB-22
+    name: "Table 22: WQI benchmarking (conventional vs fuzzy vs NPLS-GWQI)"
+    output_path: "manuscript/artifacts/Table22_WQI_Benchmarking.csv"
+    objectives: ["OBJ-2"]
+  - id: TAB-23
+    name: "Table 23: Conventional WQI class probabilities under weight uncertainty"
+    output_path: "manuscript/artifacts/Table23_ConventionalWQI_WeightUncertainty.csv"
+    objectives: ["OBJ-2"]
+  - id: TAB-24
+    name: "Table 24: Irrigation indices and N-ISI per sample"
+    output_path: "manuscript/artifacts/Table24_Irrigation_PerSample.csv"
+    objectives: ["OBJ-6"]
+  - id: TAB-25
+    name: "Table 25: Irrigation disagreement summary (N-ISI vs classical criteria)"
+    output_path: "manuscript/artifacts/Table25_Irrigation_Disagreement.csv"
+    objectives: ["OBJ-6"]
+  - id: TAB-26
+    name: "Table 26: Risk uncertainty decomposition (concentration vs intake rate)"
+    output_path: "manuscript/artifacts/Table26_Risk_Uncertainty_Decomposition.csv"
+    objectives: ["OBJ-5"]
+  - id: TAB-27
+    name: "Table 27: Risk exceedance probabilities at multiple HI thresholds"
+    output_path: "manuscript/artifacts/Table27_Risk_Threshold_Probabilities.csv"
+    objectives: ["OBJ-5"]
+
+  # --- FIGURES ---
+  - id: FIG-1
+    name: "Figure 1: Study area map"
+    output_path: "manuscript/artifacts/Figure1_Study_Area_Map.jpg"
+    objectives: ["OBJ-1"]
+    note: "External GIS/cartographic — not generated by code"
+  - id: FIG-2
+    name: "Figure 2: ILR hydrochemical facies characterisation (2×2 grid)"
+    output_path: "manuscript/artifacts/Figure2_Hydrochemical_Characterisation.png"
+    objectives: ["OBJ-1"]
+  - id: FIG-3
+    name: "Figure 3: CBE and data integrity"
+    output_path: "manuscript/artifacts/Figure3_CBE_Integrity.png"
+    objectives: ["OBJ-1"]
+  - id: FIG-4
+    name: "Figure 4: Neutrosophic GWQI structure"
+    output_path: "manuscript/artifacts/Figure4_NPLS_GWQI_Structure.png"
+    objectives: ["OBJ-2"]
+  - id: FIG-5
+    name: "Figure 5: CLR loading fingerprint"
+    output_path: "manuscript/artifacts/Figure5_CLR_Loadings.png"
+    objectives: ["OBJ-3"]
+  - id: FIG-6
+    name: "Figure 6: Geochemical constraints"
+    output_path: "manuscript/artifacts/Figure6_Geochemical_Constraints.png"
+    objectives: ["OBJ-3"]
+  - id: FIG-7
+    name: "Figure 7: Sparse PLS endpoint drivers"
+    output_path: "manuscript/artifacts/Figure7_Process_Influence.png"
+    objectives: ["OBJ-4"]
+  - id: FIG-8
+    name: "Figure 8: Deterministic HRA"
+    output_path: "manuscript/artifacts/Figure8_Deterministic_Risk.png"
+    objectives: ["OBJ-5"]
+  - id: FIG-9
+    name: "Figure 9: HBMPRA posteriors"
+    output_path: "manuscript/artifacts/Figure9_Bayesian_Posteriors.png"
+    objectives: ["OBJ-5"]
+  - id: FIG-10
+    name: "Figure 10: Irrigation suitability"
+    output_path: "manuscript/artifacts/Figure10_Irrigation_Suitability.png"
+    objectives: ["OBJ-6"]
+  - id: FIG-11
+    name: "Figure 11: NPLS-GWQI source-signature pathway"
+    output_path: "manuscript/artifacts/Figure11_Sankey_Pathway.png"
+    objectives: ["OBJ-1", "OBJ-2", "OBJ-3", "OBJ-4", "OBJ-5"]
+    # FIG-12 re-indexed as FIG-11 for narrative focus. Bootstrap (FIG-7) moved to S6.
+  - id: FIG-S1
+    name: "Figure S1: Parallel Analysis scree plot"
+    output_path: "manuscript/artifacts/FigureS1_Scree_Plot.png"
+    objectives: ["OBJ-3"]
+  - id: FIG-S2
+    name: "Figure S2: Sensory penalty sensitivity"
+    output_path: "manuscript/artifacts/FigureS2_Sensory_Sensitivity.png"
+    objectives: ["OBJ-2"]
+  - id: FIG-S3
+    name: "Figure S3: Box-and-Whisker normalised to WHO/GSA"
+    output_path: "manuscript/artifacts/FigureS3_Parameter_BoxWhisker.png"
+    objectives: ["OBJ-1"]
+  - id: FIG-S5
+    name: "Figure S5: Exploratory F Bayesian pathway"
+    output_path: "manuscript/artifacts/FigureS5_F_EndpointSafe_Pathway.png"
+    objectives: ["OBJ-4"]
+  - id: FIG-S6
+    name: "Figure S6: Bootstrap stability"
+    output_path: "manuscript/artifacts/FigureS6_Bootstrap_Stability.png"
+    objectives: ["OBJ-3"]
+  - id: FIG-S7
+    name: "Figure S7: Bipolar geochemical control curves (F vs CAI and Weathering)"
+    output_path: "manuscript/artifacts/FigureS7_Geochemical_Control_Curves.png"
+    objectives: ["OBJ-4"]
+  - id: FIG-S8
+    name: "Figure S8: Model ablation study (Signal improvement comparison)"
+    output_path: "manuscript/artifacts/FigureS8_Model_Ablation_Study.png"
+    objectives: ["OBJ-4"]
+  - id: FIG-S9
+    name: "Figure S9: Saturation index summary (Fluoride vs fluorite SI; temperature 25°C)"
+    output_path: "manuscript/artifacts/FigureS9_Saturation_Indices.png"
+    objectives: ["OBJ-3"]
+  - id: FIG-S10a
+    name: "Figure S10a: Posterior predictive check (PPC) — NPLS-GWQI driver model"
+    output_path: "manuscript/artifacts/FigureS10_PPC_NPLS_GWQI.png"
+    objectives: ["OBJ-4"]
+  - id: FIG-S10b
+    name: "Figure S10b: Posterior predictive check (PPC) — Fluoride driver model"
+    output_path: "manuscript/artifacts/FigureS10_PPC_F.png"
+    objectives: ["OBJ-4"]
+  - id: FIG-S11
+    name: "Figure S11: WQI benchmarking (conventional vs NPLS-GWQI)"
+    output_path: "manuscript/artifacts/FigureS11_WQI_Benchmarking.png"
+    objectives: ["OBJ-2"]

@@ -1,0 +1,8 @@
+Metric,Value
+n_samples,34.0
+mean_CBE_pct,-7.264684191939205
+median_CBE_pct,-2.324430424316483
+min_CBE_pct,-30.570493193537352
+max_CBE_pct,2.0633954656747653
+pct_within_±5,64.70588235294117
+pct_within_±10,76.47058823529412

@@ -1,0 +1,49 @@
+claim_id,section_file,claim_text,citation_keys
+CSM-001,manuscript/sections/01-introduction/subsection-01-groundwater-dependence.md,Groundwater is principal domestic water supply in rural northern Ghana where piped infrastructure is limited,abanyie2023
+CSM-002,manuscript/sections/01-introduction/subsection-01-groundwater-dependence.md,Karaga groundwater underpins dry-season smallholder irrigation; local knowledge guides well siting,kwoyiga2018
+CSM-003,manuscript/sections/01-introduction/subsection-01-groundwater-dependence.md,National-scale hazard modelling: ~15% of Ghana (northeast) has elevated fluoride risk; ~920000 people at risk,araya2022
+CSM-004,manuscript/sections/01-introduction/subsection-01-groundwater-dependence.md,Hydrochemistry is heterogeneous in Voltaian settings due to weathering/ion exchange/concentration effects,chegbeleh2020; sunkari2024; sunkari2024
+CSM-005,manuscript/sections/01-introduction/subsection-01-groundwater-dependence.md,Children face disproportionately higher non-carcinogenic fluoride risk,ganyaglo2019; ashong2024
+CSM-006,manuscript/sections/01-introduction/subsection-01-groundwater-dependence.md,Treating drinking-water quality / health risk / irrigation suitability as interchangeable risks overstating safety,araya2022; ganyaglo2019
+CSM-007,manuscript/sections/01-introduction/subsection-02-limits-conventional.md,Conventional WQI class can be sensitive to arbitrary design choices and imply more certainty than data justify,chidiac2023; seifi2020
+CSM-008,manuscript/sections/01-introduction/subsection-02-limits-conventional.md,Monte Carlo analysis shows weight uncertainty can alter WQI class membership,seifi2020
+CSM-009,manuscript/sections/01-introduction/subsection-02-limits-conventional.md,Bayesian model-averaging improves WQI reliability over single deterministic index,wang2023
+CSM-010,manuscript/sections/01-introduction/subsection-02-limits-conventional.md,ILR transformation addresses compositional closure; improves facies and pollution discrimination,shelton2018; oh2024
+CSM-011,manuscript/sections/01-introduction/subsection-02-limits-conventional.md,Raw-space multivariate methods on hydrochemical data can generate spurious correlations due to closure,reghais2024; drouiche2024; oh2024
+CSM-012,manuscript/sections/01-introduction/subsection-02-limits-conventional.md,Deterministic HQ/HI conceal population-level variability; probabilistic methods provide risk distributions,kaur2020; gao2022; ma2022; yan2023
+CSM-013,manuscript/sections/01-introduction/subsection-03-methodological-contribution.md,Integrated sequential facies-WQI-irrigation-risk frameworks are established in recent literature,liu2023; yan2024; jadoon2024; tan2024
+CSM-014,manuscript/sections/01-introduction/subsection-03-methodological-contribution.md,Gap: absence of single architecture linking compositional process discovery to uncertainty-aware decision modelling,rajendran2021; aware2025; li2024
+CSM-015,manuscript/sections/01-introduction/subsection-03-methodological-contribution.md,Advanced methods (ILR/CoDA; fuzzy indexing; Bayesian models; probabilistic risk) developed in separate streams,oh2024; an2022; yan2023; aware2025
+CSM-016,manuscript/sections/02-study-area/subsection-01-location.md,Groundwater is principal domestic supply in rural northern Ghana where piped infrastructure is limited,abanyie2023
+CSM-017,manuscript/sections/02-study-area/subsection-01-location.md,Groundwater supports dry-season smallholder irrigation in northern Ghana,kwoyiga2018
+CSM-018,manuscript/sections/02-study-area/subsection-02-climate.md,Silicate/carbonate weathering and reverse ion exchange control groundwater chemistry in Voltaian settings,chegbeleh2020
+CSM-019,manuscript/sections/02-study-area/subsection-02-climate.md,Mean annual rainfall in northern Ghana lower than south; inter-annual variability considerable,owusu2018; issahaku2016
+CSM-020,manuscript/sections/02-study-area/subsection-02-climate.md,Semi-arid climate limits recharge fraction; dry-season concentration effects documented,chegbeleh2020
+CSM-021,manuscript/sections/02-study-area/subsection-03-geology.md,Fluoride enrichment is geogenic in Voltaian/northern Ghana groundwater systems,araya2022; sunkari2024
+CSM-022,manuscript/sections/02-study-area/subsection-03-geology.md,Fluoride enrichment in Saboba linked to hydrogeochemical rock-water processes,sunkari2024
+CSM-023,manuscript/sections/02-study-area/subsection-03-geology.md,Hydrochemistry in Talensi District shaped by silicate/carbonate weathering and ion exchange,chegbeleh2020
+CSM-024,manuscript/sections/02-study-area/subsection-03-geology.md,Intergranular and fracture-controlled aquifer systems in Voltaian sedimentary sequences,attandoh2013; aliou2022
+CSM-025,manuscript/sections/02-study-area/subsection-04-landuse.md,Children face disproportionate non-carcinogenic fluoride risk; some boreholes unsafe for human consumption,ashong2024; sunkari2024
+CSM-026,manuscript/sections/03-methodology/subsection-03-npls-gwqi.md,Conventional arithmetic WQI class is sensitive to arbitrary design choices and threshold ambiguity,chidiac2023; seifi2020
+CSM-027,manuscript/sections/03-methodology/subsection-03-npls-gwqi.md,Bayesian model averaging improves WQI reliability over single deterministic index,wang2023
+CSM-028,manuscript/sections/03-methodology/subsection-04-compositional.md,ILR transformation addresses compositional closure and improves facies discrimination,shelton2018; oh2024
+CSM-029,manuscript/sections/03-methodology/subsection-06-bayesian.md,Horseshoe prior performs global-local shrinkage; appropriate for high-dimensional small-n regression,piironen2017
+CSM-030,manuscript/sections/03-methodology/subsection-07-health-risk.md,Deterministic HQ/HI follow USEPA non-carcinogenic risk conventions,kaur2020; gao2022
+CSM-031,manuscript/sections/03-methodology/subsection-07-health-risk.md,Bayesian uncertainty propagation in health risk returns exceedance probabilities,ma2022; yan2023
+CSM-032,manuscript/sections/03-methodology/subsection-08-irrigation.md,Entropy-weighting assigns greater weight to indices with larger relative dispersion; avoids subjective fixed weights,singh2019; gorgij2023
+CSM-033,manuscript/sections/05-discussion/subsection-01-hydrochemical-evolution.md,Rock-weathering dominance consistent with Talensi District hydrochemical findings,chegbeleh2020
+CSM-034,manuscript/sections/05-discussion/subsection-01-hydrochemical-evolution.md,Fluoride enrichment in Saboba linked to rock-water interaction not exogenous contamination,sunkari2024
+CSM-035,manuscript/sections/05-discussion/subsection-01-hydrochemical-evolution.md,Comparable cation exchange signatures in Voltaian and crystalline basement aquifer systems,chegbeleh2020; sunkari2024
+CSM-036,manuscript/sections/05-discussion/subsection-01-hydrochemical-evolution.md,Fluoride hazard in northern Ghana reflects convergence of geochemical conditions,araya2022; sunkari2024
+CSM-037,manuscript/sections/05-discussion/subsection-02-gwqi-structure.md,Broadly acceptable groundwater in northern Ghana punctuated by degraded subset,chegbeleh2020; ashong2024
+CSM-038,manuscript/sections/05-discussion/subsection-02-gwqi-structure.md,Neutrosophic classification avoids misrepresentation of confidence near threshold values,chidiac2023; seifi2020
+CSM-039,manuscript/sections/05-discussion/subsection-02-gwqi-structure.md,Bootstrapped VIP weighting produces data-driven weights vs fixed-weight indices,seifi2020
+CSM-040,manuscript/sections/05-discussion/subsection-04-health.md,Children most vulnerable in probabilistic fluoride risk assessment in Upper East Region,ganyaglo2019
+CSM-041,manuscript/sections/05-discussion/subsection-04-health.md,Children face greater fluoride non-carcinogenic risk than adults in Bongo District,ashong2024
+CSM-042,manuscript/sections/05-discussion/subsection-04-health.md,Uncertainty-propagated health risk characterisation via Bayesian/probabilistic methods,kaur2020; ma2022
+CSM-043,manuscript/sections/05-discussion/subsection-05-irrigation.md,Groundwater in northern Ghana supports some irrigation uses while failing others,chegbeleh2020; kwoyiga2018
+CSM-044,manuscript/sections/05-discussion/subsection-05-irrigation.md,Entropy weighting ensures high-dispersion indices contribute proportionally more to composite score,liu2023; yan2024
+CSM-045,manuscript/sections/05-discussion/subsection-06-methods.md,ILR/CoDA avoids closure-induced spurious correlations in hydrochemical multivariate analysis,shelton2018; oh2024
+CSM-046,manuscript/sections/05-discussion/subsection-06-methods.md,WQI limitations: fixed weights embed model-form uncertainty; neutrosophic/bootstrapped weighting mitigates this,seifi2020; chidiac2023; wang2023
+CSM-047,manuscript/sections/05-discussion/subsection-06-methods.md,Dual-space framework transferable to other integrated groundwater assessment studies,liu2023; jadoon2024
+CSM-048,manuscript/sections/06-management-implications/section.md,Children most vulnerable demographic in fluoride health risk (P(HI>1) = 0.6875),ganyaglo2019; ashong2024

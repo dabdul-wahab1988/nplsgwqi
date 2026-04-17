@@ -1,0 +1,41 @@
+SampleID,Excellent,Good,Poor,Very Poor,Unsuitable,Most_Probable_Class,Confidence_Pct
+KAY1,100.0,0.0,0.0,0.0,0.0,Excellent,100.0
+NYI4,100.0,0.0,0.0,0.0,0.0,Excellent,100.0
+SUS3,100.0,0.0,0.0,0.0,0.0,Excellent,100.0
+GBG8,100.0,0.0,0.0,0.0,0.0,Excellent,100.0
+TOT1,0.0,26.02,73.98,0.0,0.0,Poor,73.98
+NAN1,99.98,0.02,0.0,0.0,0.0,Excellent,99.98
+NAN4,100.0,0.0,0.0,0.0,0.0,Excellent,100.0
+"SampleID
+MAM7    MAM7
+MAM7    MAM7
+Name: SampleID, dtype: object",100.0,0.0,0.0,0.0,0.0,Excellent,100.0
+BIB4,100.0,0.0,0.0,0.0,0.0,Excellent,100.0
+"SampleID
+MAM7    MAM7
+MAM7    MAM7
+Name: SampleID, dtype: object",0.0,0.0,0.0,23.74,76.25999999999999,Unsuitable,76.25999999999999
+ZAZ165,0.0,3.3000000000000003,95.64,1.06,0.0,Poor,95.64
+TAT170,0.0,0.58,96.1,3.32,0.0,Poor,96.1
+BAF195,0.0,0.02,78.2,21.78,0.0,Poor,78.2
+NYG170,0.0,0.1,91.03999999999999,8.86,0.0,Poor,91.03999999999999
+LAL85,0.12,94.26,5.62,0.0,0.0,Good,94.26
+TUT4,100.0,0.0,0.0,0.0,0.0,Excellent,100.0
+NYC5,100.0,0.0,0.0,0.0,0.0,Excellent,100.0
+SUJ7,100.0,0.0,0.0,0.0,0.0,Excellent,100.0
+ISJ2,100.0,0.0,0.0,0.0,0.0,Excellent,100.0
+DAN4,100.0,0.0,0.0,0.0,0.0,Excellent,100.0
+KPK6,100.0,0.0,0.0,0.0,0.0,Excellent,100.0
+BIB9,100.0,0.0,0.0,0.0,0.0,Excellent,100.0
+KAP2,100.0,0.0,0.0,0.0,0.0,Excellent,100.0
+GBG2,100.0,0.0,0.0,0.0,0.0,Excellent,100.0
+NAN6,100.0,0.0,0.0,0.0,0.0,Excellent,100.0
+GAG7,100.0,0.0,0.0,0.0,0.0,Excellent,100.0
+TUT9,100.0,0.0,0.0,0.0,0.0,Excellent,100.0
+NYG8,100.0,0.0,0.0,0.0,0.0,Excellent,100.0
+NYG9,100.0,0.0,0.0,0.0,0.0,Excellent,100.0
+ZOZ1,100.0,0.0,0.0,0.0,0.0,Excellent,100.0
+NYY1,0.0,0.02,99.98,0.0,0.0,Poor,99.98
+KUK9,100.0,0.0,0.0,0.0,0.0,Excellent,100.0
+NYN97,100.0,0.0,0.0,0.0,0.0,Excellent,100.0
+SUG03,100.0,0.0,0.0,0.0,0.0,Excellent,100.0

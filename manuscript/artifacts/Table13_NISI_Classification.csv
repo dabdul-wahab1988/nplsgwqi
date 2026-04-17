@@ -1,0 +1,12 @@
+Row_Type,Item,Value,Count
+Entropy_Weight,SAR,0.06676569601191182,
+Entropy_Weight,SSP,0.006491123820109542,
+Entropy_Weight,MH,0.014125417623440134,
+Entropy_Weight,KR,0.26315430785818733,
+Entropy_Weight,PI,0.345935389424822,
+Entropy_Weight,RSC,0.02934382502498363,
+Entropy_Weight,PS,0.27418424019029214,
+NISI_Class_Distribution,Marginal,67.6470588235294,23.0
+NISI_Class_Distribution,Excellent,14.705882352941176,5.0
+NISI_Class_Distribution,Unsuitable,8.823529411764707,3.0
+NISI_Class_Distribution,Good,8.823529411764707,3.0

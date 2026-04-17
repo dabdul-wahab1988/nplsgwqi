@@ -6,6 +6,8 @@ __pycache__/
 .mypy_cache/
 .ruff_cache/
 
+pymc_cache/
+
 .env
 .venv/
 venv/

@@ -1,0 +1,4 @@
+Endpoint,Model_Type,Predictor_Block,Features_Count,Features,In_Sample_R2,CV_R2_Mean,Permutation_p
+NPLS_GWQI,Bayesian_Horseshoe,Augmented Field+Compositional,1,Aug_EC,0.9784639158720986,,
+F,Bayesian_Horseshoe,Augmented Field+Compositional,0,,0.6926911754020499,,
+F_SPLS,Sparse_PLS,Augmented Field+Compositional,8,Aug_Na_Cl; Aug_K; Aug_CAI_1; Aug_pH; Aug_Mg_Ca; Aug_Ca_HCO3; Aug_TDS; Aug_EC,0.28787460840343104,-3.0230483046515806,0.6190476190476191

@@ -1,0 +1,26 @@
+/home/ickson/.local/lib/python3.12/site-packages/sklearn/covariance/_robust_covariance.py:185: RuntimeWarning: Determinant has increased; this should not happen: log(det) > log(previous_det) (-43.597087073875684 > -44.983381434995593). You may want to try with a higher value of support_fraction (current value: 0.647).
+  warnings.warn(
+Initializing NUTS using jitter+adapt_diag...
+Sequential sampling (2 chains in 1 job)
+NUTS: [tau, lam, beta, alpha, sigma]
+Sampling 2 chains for 500 tune and 1_000 draw iterations (1_000 + 2_000 draws total) took 47 seconds.
+There were 68 divergences after tuning. Increase `target_accept` or reparameterize.
+We recommend running at least 4 chains for robust computation of convergence diagnostics
+Initializing NUTS using jitter+adapt_diag...
+Sequential sampling (2 chains in 1 job)
+NUTS: [tau, lam, beta, alpha, sigma]
+Sampling 2 chains for 500 tune and 1_000 draw iterations (1_000 + 2_000 draws total) took 142 seconds.
+There were 240 divergences after tuning. Increase `target_accept` or reparameterize.
+We recommend running at least 4 chains for robust computation of convergence diagnostics
+The rhat statistic is larger than 1.01 for some parameters. This indicates problems during sampling. See https://arxiv.org/abs/1903.08008 for details
+The effective sample size per chain is smaller than 100 for some parameters.  A higher number is needed for reliable rhat and ess computation. See https://arxiv.org/abs/1903.08008 for details
+Initializing NUTS using jitter+adapt_diag...
+Sequential sampling (2 chains in 1 job)
+NUTS: [tau, lam, beta, alpha, sigma]
+Sampling 2 chains for 500 tune and 1_000 draw iterations (1_000 + 2_000 draws total) took 120 seconds.
+There were 747 divergences after tuning. Increase `target_accept` or reparameterize.
+We recommend running at least 4 chains for robust computation of convergence diagnostics
+The rhat statistic is larger than 1.01 for some parameters. This indicates problems during sampling. See https://arxiv.org/abs/1903.08008 for details
+The effective sample size per chain is smaller than 100 for some parameters.  A higher number is needed for reliable rhat and ess computation. See https://arxiv.org/abs/1903.08008 for details
+/mnt/c/Users/DicksonAbdul-Wahab/Documents/Dr_Sukari_Manuscript/wqiwithGPT/src/nplsgwqi/sparse_pls.py:71: RuntimeWarning: invalid value encountered in sqrt
+  vip[pred_idx] = np.sqrt(n_predictors * weight / total_explained)

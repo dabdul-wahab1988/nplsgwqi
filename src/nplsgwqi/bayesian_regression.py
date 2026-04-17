@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import pymc as pm
+import os
 from sklearn.preprocessing import StandardScaler
 
 from .compositional import clr_transform
@@ -37,6 +38,13 @@ def run_bayesian_endpoint_model(
     tune: int = 1000,
     chains: int = 2,
     random_state: int = 42,
+    log_likelihood: bool = True,
+    posterior_predictive: bool = False,
+    tau_beta: float = 1.0,
+    lam_beta: float = 1.0,
+    target_accept: float = 0.95,
+    max_treedepth: int | None = None,
+    cores: int | None = None,
 ) -> dict:
     if use_augmented:
         # We assume comp_data is ALREADY the augmented block from get_augmented_predictor_block
@@ -64,8 +72,8 @@ def run_bayesian_endpoint_model(
     
     with pm.Model() as bayes_model:
         # Horseshoe prior for sparsity
-        tau = pm.HalfCauchy('tau', beta=1.0)
-        lam = pm.HalfCauchy('lam', beta=1.0, shape=n_features)
+        tau = pm.HalfCauchy('tau', beta=tau_beta)
+        lam = pm.HalfCauchy('lam', beta=lam_beta, shape=n_features)
         
         # Coefficients
         beta = pm.Normal('beta', mu=0, sigma=tau * lam, shape=n_features)
@@ -81,17 +89,30 @@ def run_bayesian_endpoint_model(
         Y_obs = pm.Normal('Y_obs', mu=mu, sigma=sigma, observed=y_scaled)
         
         # Sample
-        trace = pm.sample(
+        sample_kwargs = dict(
             draws=draws,
             tune=tune,
             chains=chains,
-
-            target_accept=0.95,
+            target_accept=target_accept,
             random_seed=random_state,
             progressbar=False,
-            cores=1,
-            idata_kwargs={"log_likelihood": False},
+            cores=int(cores) if cores is not None else min(int(chains), max(os.cpu_count() or 1, 1)),
+            return_inferencedata=True,
+            idata_kwargs={"log_likelihood": bool(log_likelihood)},
         )
+        if max_treedepth is not None:
+            sample_kwargs["max_treedepth"] = int(max_treedepth)
+
+        trace = pm.sample(**sample_kwargs)
+
+        if posterior_predictive:
+            trace = pm.sample_posterior_predictive(
+                trace,
+                var_names=["Y_obs"],
+                random_seed=random_state,
+                progressbar=False,
+                extend_inferencedata=True,
+            )
     
     # Extract posteriors for coefficients
     beta_post = trace.posterior['beta'].values.reshape(-1, n_features)
