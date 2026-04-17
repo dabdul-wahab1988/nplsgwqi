@@ -943,7 +943,7 @@ Charge-balance error (CBE, %) was computed from meq/L-converted major ions and i
 
 ## S5.2 Bayesian endpoint-driver diagnostics (horseshoe regression)
 
-For the two Bayesian endpoint-driver models (NPLS-GWQI and fluoride), we report sampler configuration and diagnostics (R-hat, ESS), posterior predictive checks (PPC), and PSIS-LOO/WAIC summaries derived from the stored log-likelihood (Table 19; Figure S10). Pareto-$k$ and WAIC warning flags are reported to transparently qualify any driver-attribution claims in the main text.
+For the two Bayesian endpoint-driver models (NPLS-GWQI and fluoride), we report sampler configuration and diagnostics (R-hat, ESS), posterior predictive checks (PPC), and PSIS-LOO/WAIC summaries derived from the stored log-likelihood (Table 19; Figure S10). Pareto-$k$ and WAIC warning flags are reported to transparently qualify any driver-attribution claims in the main text. Where PSIS-LOO returned Pareto-$k > 1$ for specific observations, we performed exact leave-one-out refits for those points (reloo-style) and replaced the affected pointwise log predictive density contributions; the resulting corrected elpd is reported as `loo_elpd_reloo` in Table 19.
 
 ## S5.3 Prior sensitivity (global shrinkage scale)
 
